@@ -5,7 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is simple calculator implement how Event Working Between Component
 
 ### Feature
-[Display](3DTest.png)
+Separete Component
+Material Design on React https://tleunen.github.io/react-mdl/
+Event between Component
 
 ### Display
 [Calculator Display](src/calculator.png)
