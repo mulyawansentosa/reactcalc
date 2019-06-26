@@ -10,4 +10,4 @@ Material Design on React https://tleunen.github.io/react-mdl/
 Event between Component
 
 ### Display
-[Calculator Display](src/calculator.png)
+[Calculator Display](src/images/calculator.png)
