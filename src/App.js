@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Screen from "./components/Screen";
 import Buttons from "./components/Buttons";
+import Title from "./components/Title";
 import "react-mdl/extra/material.css";
 import "react-mdl/extra/material.js";
 import {Layout, Header, Navigation, Content} from "react-mdl";
@@ -13,8 +14,9 @@ class App extends React.Component{
       text: 0,
       savedNumber: 0,
       number: 0,
-      operation: ''
-    }  
+      operation: '',
+      title: 'React Calculator'
+    }
   }
 
   no1 = () => {
@@ -155,11 +157,17 @@ class App extends React.Component{
     this.setState({text: this.state.savedNumber});
   }
 
+  changeTitle(res){
+    this.setState({
+      title: res
+    });
+  }
+
   render(){
     return (
       <div className="demo-big-content">
         <Layout>
-          <Header title="React Calculator">
+          <Header title={this.state.title}>
           </Header>
           <Content>
             <div className="conteiner" style={{padding: "20px"}}>
@@ -185,6 +193,9 @@ class App extends React.Component{
                   calc={this.calc.bind(this)}
                   clear={this.clear.bind(this)}
                 />
+              </div>
+              <div>
+                <Title eventTitle={this.changeTitle.bind(this)} title={this.state.title}/>                
               </div>
             </div>
           </Content>
